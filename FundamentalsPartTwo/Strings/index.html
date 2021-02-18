@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <script>
+        let string = 'The revolution will not be televised.';
+        console.log(string);
+
+        let sgl = 'Single quotes.';
+        let dbl = "Double quotes";
+        console.log(sgl);
+        console.log(dbl);
+        
+        //Escaping characters in a string
+        let bigmouth = 'I\'ve got no right to take my place...';
+        console.log(bigmouth);
+
+        //Concatenating strings
+        let one = 'Hello, ';
+        let two = 'how are you?';
+        let joined = one + two;
+        console.log(joined);
+
+        let multiple = one + one + one + one + two;
+        console.log(multiple);
+        let response = one + 'I am fine — ' + two;
+        console.log(response);
+
+        //Concatenating in context
+        function myfunction() {
+            let name = prompt('What is your name?');
+            alert('Hello ' + name + ', nice to see you!');
+        }
+
+        //Numbers vs Strings 
+        let myString = '123';
+        let myNum = Number(myString);
+       console.log( typeof myNum);
+
+       let myNums = 123;
+       let myStrings = myNums.toString();
+       console.log(typeof myStrings);
+
+       //Template literals 
+        let score = 9;
+        let song = "Waymaker";
+        let highestScore = 10;
+        let output = 'I like the song "' + song + '". I gave it a score of ' + (score/highestScore * 100) + '%.';       
+        //better
+        output = `I like the song "${ song }". I gave it a score of ${ score/highestScore * 100 }%.`;
+        console.log(output);
+
+        //Example
+        let examScore = 45;
+        let examHighestScore = 70;
+        examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round((examScore/examHighestScore*100)) }%). ${ examScore >= 49 ? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.' }`;
+        console.log(examReport);
+
+        //If you want to split a traditonal string over multiple lines, use /n
+        outputs = 'I like the song "' + song + '".\nI gave it a score of ' + (score/highestScore * 100) + '%.';
+        console.log(outputs);
+ 
+
+
+    </script>
+    <button onclick="myfunction()">Press me</button>
+
+</body>
+</html>
